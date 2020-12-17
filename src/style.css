@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: whitesmoke;
+}
+
+header {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+header > img {
+  width: 150px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+input::placeholder,
+button {
+  font-family: "Courier New", Courier, monospace;
+}
+.memeContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.memeContainer img {
+  width: 100%;
+}
+.memeContainer > h2 {
+  text-transform: uppercase;
+  font-size: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  text-shadow: 2px 2px 5px #000;
+  color: white;
+}
+
+.topText {
+  top: 0;
+}
+
+.bottomText {
+  bottom: 0;
+}
