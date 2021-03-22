@@ -35,7 +35,7 @@ function Memegenerator() {
       <form onSubmit={handleSubmit}>
           <input type="text" value={topText} onChange={handleTopTextChange} placeholder="Top text"/>
           <input type="text" value={bottomText} onChange={handleBottomTextChange} placeholder="Bottom text"/>
-          <button>Generate meme</button>
+          <button type="submit">Generate meme</button>
       </form>
 
       <div className="memeContainer">
