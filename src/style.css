@@ -4,7 +4,8 @@
 
 body {
   font-family: "Courier New", Courier, monospace;
-  background-color: whitesmoke;
+  background-color: rgba(111, 129, 148, 0.445);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 header {
@@ -12,33 +13,80 @@ header {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-}
-header > img {
-  width: 150px;
-}
-form {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  padding: 0.6em;
 }
 
-input::placeholder,
+header>img {
+  width: 150px;
+}
+
+h1 {
+  text-shadow: 2px 2px 5px #000;
+}
+
+.container {
+  padding: 1em;
+  margin: 0 auto 1em auto;
+  width: 600px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+input {
+  border-radius: 20px;
+  padding: 0.6em;
+  margin-right: 1em;
+  border: none;
+  background-color: rgba(91, 92, 91, 0.699);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+input::placeholder {
+  font-family: inherit;
+  color: rgba(255, 255, 255, 0.527);
+}
+
+input:hover{
+  transform: scale(1.1);
+}
 button {
-  font-family: "Courier New", Courier, monospace;
+  border-radius: 20px;
+  padding: 1.2em 1em;
+  border: none;
+  background-color: rgba(19, 78, 133, 0.932);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover{
+  transform: scale(1.1);
 }
 .memeContainer {
   position: relative;
-  margin: 0 auto;
-  width: 500px;
-  height: auto;
+  margin: 1em auto;
+  width: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .memeContainer img {
-  width: 100%;
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 20px;
 }
-.memeContainer > h2 {
+
+.memeContainer>h2 {
   text-transform: uppercase;
   font-size: 32px;
   position: absolute;
@@ -46,7 +94,6 @@ button {
   transform: translateX(-50%);
   margin: 15px 0;
   text-shadow: 2px 2px 5px #000;
-  color: white;
 }
 
 .topText {
@@ -55,4 +102,31 @@ button {
 
 .bottomText {
   bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .container{
+    width:100%;
+    margin: 0 auto;
+  }
+  header{
+    font-size: 12px;
+  }
+  header >img {
+    width:100px;
+  }
+  form {
+    justify-content:center;
+  }
+  button {
+    margin-top: 0.8em;
+    padding: 0.8em 1em;
+  }
+  input {
+    margin: 0 0 1em 0;
+    width: 100%;
+  }
+  .memeContainer {
+    width: 100%;
+  }
 }

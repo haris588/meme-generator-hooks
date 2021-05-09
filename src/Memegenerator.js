@@ -8,11 +8,11 @@ function Memegenerator() {
 
   useEffect(() => {
     fetch('https://api.imgflip.com/get_memes')
-    .then(response => response.json()
-    .then(JsonResponse => {
-      const {memes} = JsonResponse.data;
-      setMemeApi(memes);
-    }))
+      .then(response => response.json()
+        .then(JsonResponse => {
+          const { memes } = JsonResponse.data;
+          setMemeApi(memes);
+        }))
   }, [])
 
 
@@ -31,19 +31,20 @@ function Memegenerator() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-          <input type="text" value={topText} onChange={handleTopTextChange} placeholder="Top text"/>
-          <input type="text" value={bottomText} onChange={handleBottomTextChange} placeholder="Bottom text"/>
+    <>
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={topText} onChange={handleTopTextChange} placeholder="Top text" />
+          <input type="text" value={bottomText} onChange={handleBottomTextChange} placeholder="Bottom text" />
           <button type="submit">Generate meme</button>
-      </form>
-
+        </form>
+      </div>
       <div className="memeContainer">
         <img src={meme} alt="Meme" />
         <h2 className="topText">{topText}</h2>
         <h2 className="bottomText">{bottomText}</h2>
       </div>
-    </div>  
+    </>
   );
 }
 
